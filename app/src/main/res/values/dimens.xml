@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="editText_textsize_login">20sp</dimen>
+    <dimen name="height_cardview">150dp</dimen>
+    <dimen name="cornerradios">4dp</dimen>
+    <dimen name="dicesi">16dp</dimen>
+    <dimen name="like_margintop">10dp</dimen>
+    <dimen name="bottonbar_height">70dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">40dp</dimen>
+    <dimen name="setentaasd">70dp</dimen>
+    <dimen name="tama_hab">35dp</dimen>
+    <dimen name="fab_btn_agregar">12dp</dimen>
+    <dimen name="layout_margin_txt">15dp</dimen>
+</resources>

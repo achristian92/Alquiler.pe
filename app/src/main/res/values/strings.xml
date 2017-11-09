@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Alquiler.pe</string>
+    <string name="usuario">Usuario</string>
+    <string name="password">Password</string>
+    <string name="button_entrar">INGRESAR</string>
+    <string name="pregunta_cuenta">No tienes Cuenta?, </string>
+    <string name="link_crearaccond">  Crear una Aqui!!</string>
+    <string name="crear_usu">Crear Usuario</string>
+    <string name="nombre">Nombres</string>
+    <string name="apellido">Apellidos</string>
+    <string name="correo">Correo</string>
+    <string name="Usuario_reg">Usuario Registrado</string>
+    <string name="registrar">Registrar</string>
+    <string name="estadoswicht">Estado...</string>
+    <string name="habi_free">Libre</string>
+    <string name="habi_close">Ocupado</string>
+    <string name="tab_search">Buscar</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_pago">Pagos</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="buscar">buscar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_inquilino">Alan Christian Ruiz Aguirre</string>
+    <string name="fecha_proxi_pago">Fecha de Pago :</string>
+    <string name="fecha_prox_pago">01/11/2017</string>
+    <string name="text_pago_base">Precio : S/.</string>
+    <string name="text_pago_pagado">100</string>
+    <string name="habitacion">Habitacion :</string>
+    <string name="num_hab">101</string>
+    <string name="num_dni">DNI</string>
+    <string name="celular_inq">Celular</string>
+    <string name="crear_new_num_hab">Crear numero habitacion</string>
+    <string name="txt_fecha_pag">Fecha de Pago Mensual</string>
+
+</resources>
