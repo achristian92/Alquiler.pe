@@ -7,7 +7,8 @@
     <color name="colorTextSecondary">#757575</color>
     <color name="colorDivider">#bdbdbd</color>
     <color name="coloblanco">#FFFFFF</color>
-    <color name="rosado">#009688</color>
+    <color name="verde">#009688</color>
     <color name="backgroundtext_card">#53292929</color>
+    <color name="ver_floartbutton">#086e65</color>
 
 </resources>

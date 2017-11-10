@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,32 +9,163 @@
     tools:context="apps.construyendo.alquilerpe.view.activity.AddHabMainActivity">
 
 
-    <FrameLayout
-        android:id="@+id/conteiner_fragments"
+    <include layout="@layout/actionbar_toolbar" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_navigation"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:paddingBottom="@dimen/bottonbar_height">
+        android:fillViewport="true"
+        >
 
-    </FrameLayout>
-
-
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="bottom|end"
-        app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@drawable/color_items_bottom_nav"
-        app:itemTextColor="@drawable/color_items_bottom_nav"
-        app:menu="@menu/menu_navigation">
+        android:layout_margin="16dp"
+        android:orientation="vertical">
 
-    </android.support.design.widget.BottomNavigationView>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextFormulario"
+            >
 
-</RelativeLayout>
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_RI_nombre"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/icon_ri_user"
+                android:layout_height="wrap_content"
+                android:hint="@string/nombre" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextFormulario"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_RI_apellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_ri_user"
+                android:hint="@string/apellido" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextFormulario"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_RI_DNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_ri_dni"
+                android:inputType="number"
+                android:hint="@string/num_dni" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextFormulario"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_RI_celular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@drawable/icon_ri_phone"
+                android:hint="@string/celular_inq" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_ri_room"
+                android:textSize="@dimen/editText_textsize_login"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/seleccion_hab" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/crear_new_num_hab" />
+
+            <EditText
+                android:id="@+id/edit_num_hab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/ingreso_n_hab"
+                />
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/EditTextFormulario">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:drawableLeft="@drawable/icon_ri_precio"
+                android:hint="@string/text_pago_base" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/EditTextFormulario">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_ri_date"
+                android:hint="@string/txt_fecha_pag" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/EditTextFormulario">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_ri_date"
+                android:hint="@string/fecha_contrato" />
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+
+</LinearLayout>

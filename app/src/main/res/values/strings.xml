@@ -6,6 +6,7 @@
     <string name="pregunta_cuenta">No tienes Cuenta?, </string>
     <string name="link_crearaccond">  Crear una Aqui!!</string>
     <string name="crear_usu">Crear Usuario</string>
+    <string name="registro_inqui">Registro Inquilino</string>
     <string name="nombre">Nombres</string>
     <string name="apellido">Apellidos</string>
     <string name="correo">Correo</string>
@@ -38,5 +39,8 @@
     <string name="celular_inq">Celular</string>
     <string name="crear_new_num_hab">Crear numero habitacion</string>
     <string name="txt_fecha_pag">Fecha de Pago Mensual</string>
+    <string name="seleccion_hab">Asigne Habitacion</string>
+    <string name="ingreso_n_hab">N° Habitacion</string>
+    <string name="fecha_contrato">Fecha Contrato</string>
 
 </resources>

@@ -7,82 +7,11 @@
     tools:context="apps.construyendo.alquilerpe.view.fragments.ReportmoneyFragment">
 
 
-    <include layout="@layout/actionbar_toolbar" />
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        >
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/EditTextFormulario"
-            >
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/edit_RI_nombre"
-                android:layout_width="match_parent"
-                android:drawableLeft="@drawable/icon_ri_user"
-                android:layout_height="wrap_content"
-                android:hint="@string/nombre" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/EditTextFormulario"
-           >
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/edit_RI_apellidos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/icon_ri_user"
-                android:hint="@string/apellido" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/EditTextFormulario"
-            >
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/edit_RI_DNI"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/icon_ri_dni"
-                android:inputType="number"
-                android:hint="@string/num_dni" />
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/EditTextFormulario"
-           >
-
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/edit_RI_celular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:layout_marginBottom="20dp"
-                android:drawableLeft="@drawable/icon_ri_phone"
-                android:hint="@string/celular_inq" />
-        </android.support.design.widget.TextInputLayout>
 
 
-    </LinearLayout>
-    </ScrollView>
+
 </LinearLayout>

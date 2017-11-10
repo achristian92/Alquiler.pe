@@ -16,7 +16,7 @@
             android:id="@+id/image_pictureCard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_cardview"
-            android:background="@color/rosado"
+            android:background="@color/verde"
             />
 
         <LinearLayout
