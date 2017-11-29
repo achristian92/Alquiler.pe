@@ -1,4 +1,4 @@
-package apps.construyendo.alquilerpe.view.fragments;
+package apps.construyendo.alquilerpe.presentacion.view.fragments;
 
 
 import android.os.Bundle;
@@ -12,11 +12,10 @@ import apps.construyendo.alquilerpe.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ReportmoneyFragment extends Fragment {
+public class SearchFragment extends Fragment {
 
 
-
-    public ReportmoneyFragment() {
+    public SearchFragment() {
         // Required empty public constructor
     }
 
@@ -25,15 +24,7 @@ public class ReportmoneyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_reportmoney, container, false);
-
-        return view;
-
-
+        return inflater.inflate(R.layout.fragment_search, container, false);
     }
 
-    }
-
-
-
-
+}

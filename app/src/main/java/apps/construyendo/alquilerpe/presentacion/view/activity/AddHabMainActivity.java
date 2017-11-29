@@ -1,11 +1,7 @@
-package apps.construyendo.alquilerpe.view.activity;
+package apps.construyendo.alquilerpe.presentacion.view.activity;
 
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v7.widget.Toolbar;
@@ -15,9 +11,6 @@ import android.widget.Toast;
 
 
 import apps.construyendo.alquilerpe.R;
-import apps.construyendo.alquilerpe.view.fragments.ReportmoneyFragment;
-import apps.construyendo.alquilerpe.view.fragments.HomeFragment;
-import apps.construyendo.alquilerpe.view.fragments.SearchFragment;
 
 public class AddHabMainActivity extends AppCompatActivity {
 

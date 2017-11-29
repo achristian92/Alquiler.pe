@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="apps.construyendo.alquilerpe.view.activity.MainActivity">
+    tools:context=".presentacion.view.activity.MainActivity">
 
     <include layout="@layout/actionbar_toolbar"
         android:id="@+id/activity_toolbar" />

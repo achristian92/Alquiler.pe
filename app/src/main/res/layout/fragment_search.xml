@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="apps.construyendo.alquilerpe.view.fragments.SearchFragment">
+    tools:context=".presentacion.view.fragments.SearchFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/cardview_picture"/>

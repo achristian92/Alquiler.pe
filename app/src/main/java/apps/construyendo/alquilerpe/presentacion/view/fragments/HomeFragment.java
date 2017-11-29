@@ -1,22 +1,16 @@
-package apps.construyendo.alquilerpe.view.fragments;
+package apps.construyendo.alquilerpe.presentacion.view.fragments;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import apps.construyendo.alquilerpe.R;
-import apps.construyendo.alquilerpe.view.activity.AddHabMainActivity;
-import apps.construyendo.alquilerpe.view.activity.MainActivity;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+import apps.construyendo.alquilerpe.presentacion.view.activity.AddHabMainActivity;
 
 /**
  * A simple {@link Fragment} subclass.
