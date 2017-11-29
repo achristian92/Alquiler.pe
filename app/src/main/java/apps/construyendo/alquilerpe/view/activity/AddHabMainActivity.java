@@ -9,7 +9,9 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import apps.construyendo.alquilerpe.R;
@@ -38,5 +40,17 @@ public class AddHabMainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar_RI);
         getSupportActionBar().setTitle(titulo);
         getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+    }
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_ri_toolbar,menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem menuItem){
+        switch (menuItem.getItemId()){
+            case R.id.icon__ri_save:
+                Toast.makeText(this, "Se guardo", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
     }
 }

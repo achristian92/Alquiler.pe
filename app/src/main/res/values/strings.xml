@@ -42,5 +42,6 @@
     <string name="seleccion_hab">Asigne Habitacion</string>
     <string name="ingreso_n_hab">N° Habitacion</string>
     <string name="fecha_contrato">Fecha Contrato</string>
+    <string name="guardar">Guardar</string>
 
 </resources>
