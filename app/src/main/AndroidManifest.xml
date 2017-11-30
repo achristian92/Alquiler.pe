@@ -17,13 +17,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentacion.view.activity.CreateAccountActivity"
+            android:name=".presentacion.view.activity.CrearUsuarioActivity"
             android:parentActivityName=".presentacion.view.activity.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".presentacion.view.activity.LoginActivity" />
         </activity>
-        <activity android:name=".presentacion.view.activity.AddHabMainActivity"></activity>
+        <activity android:name=".presentacion.view.activity.HabDetalle_Activity"></activity>
         <activity android:name=".presentacion.view.activity.MainActivity"></activity>
     </application>
 

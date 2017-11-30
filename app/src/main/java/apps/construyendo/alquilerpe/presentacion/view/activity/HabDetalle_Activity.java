@@ -12,15 +12,15 @@ import android.widget.Toast;
 
 import apps.construyendo.alquilerpe.R;
 
-public class AddHabMainActivity extends AppCompatActivity {
-
+public class HabDetalle_Activity extends AppCompatActivity {
+    public static final  String EXTRA_ALQUILER="activity.noticiadetalle.EXTRA_NOTICIA";
     private Toolbar toolbar_RI;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addhab_main);
+        setContentView(R.layout.activity_registrohab_main);
         toolbar_RI=(Toolbar) findViewById(R.id.toolbar);
 
         showToolbar(getResources().getString(R.string.registro_inqui),false);

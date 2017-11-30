@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+<android.support.v7.widget.CardView
+
     android:id="@+id/pictureCard"
     android:layout_width="match_parent"
     android:layout_height="@dimen/height_cardview"
-    cardview:cardCornerRadius="@dimen/cornerradios"
-    >
+    cardview:cardCornerRadius="@dimen/cornerradios">
 
     <FrameLayout
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/image_pictureCard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_cardview"
-            android:background="@color/verde"
-            />
+            android:background="@color/verde" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,31 +34,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/dicesi"
+                android:text="@string/habitacion"
                 android:textColor="@color/coloblanco"
                 android:textSize="@dimen/tama_hab"
-                android:text="@string/habitacion"
 
                 />
 
             <TextView
                 android:id="@+id/txt_num_hab"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="4dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="80dp"
+                android:text="@string/num_hab"
                 android:textColor="@color/coloblanco"
-                android:textSize="@dimen/tama_hab"
-                android:text="@string/num_hab" />
+                android:textSize="@dimen/tama_hab" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="bottom"
-            android:paddingLeft="@dimen/dicesi"
             android:background="@color/backgroundtext_card"
-            >
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dicesi">
+
             <TextView
                 android:id="@+id/text_inqui"
                 android:layout_width="wrap_content"
@@ -66,8 +72,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txt_texto_feha_pago"
@@ -85,49 +91,60 @@
                     android:textColor="@color/coloblanco" />
 
             </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txt_precio_base"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/text_pago_base"
-                android:textColor="@color/coloblanco" />
-            <TextView
-                android:id="@+id/txt_precio_pagado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                android:text="@string/text_pago_pagado"
-                android:textColor="@color/coloblanco" />
-         </LinearLayout>
+                <TextView
+                    android:id="@+id/txt_precio_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_pago_base"
+                    android:textColor="@color/coloblanco" />
+
+                <TextView
+                    android:id="@+id/txt_precio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/text_pago_pagado"
+                    android:textColor="@color/coloblanco" />
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
                 <Switch
                     android:id="@+id/switch1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="@string/estadoswicht"
-                    android:textColor="@color/coloblanco"
-                    android:layout_weight="1" />
+                    android:textColor="@color/coloblanco" />
 
                 <TextView
                     android:id="@+id/txt_estadohabit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textColor="@color/coloblanco"
-                    android:text="@string/habi_free" />
+                    android:text="@string/habi_free"
+                    android:textColor="@color/coloblanco" />
             </LinearLayout>
 
         </LinearLayout>
     </FrameLayout>
-
 </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_linea"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/image_pictureCard"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorPrimary" />
+
+</LinearLayout>

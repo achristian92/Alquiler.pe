@@ -12,7 +12,7 @@ import apps.construyendo.alquilerpe.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CreateAccountActivity extends AppCompatActivity {
+public class CrearUsuarioActivity extends AppCompatActivity {
 
 
     @BindView(R.id.edit_c_nombre)
@@ -31,13 +31,13 @@ public class CreateAccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_account);
+        setContentView(R.layout.activity_crear_usuario);
         ButterKnife.bind(this);
         showToolbar(getResources().getString(R.string.crear_usu),true);
         btnCrearCuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(CreateAccountActivity.this,LoginActivity.class);
+                Intent intent=new Intent(CrearUsuarioActivity.this,LoginActivity.class);
                 startActivity(intent);
             }
         });

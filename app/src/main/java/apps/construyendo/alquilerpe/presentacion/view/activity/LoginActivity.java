@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         txtLinkCreaaccond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LoginActivity.this, CreateAccountActivity.class);
+                Intent intent=new Intent(LoginActivity.this, CrearUsuarioActivity.class);
                 startActivity(intent);
             }
         });
