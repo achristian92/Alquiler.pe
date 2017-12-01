@@ -2,6 +2,7 @@ package apps.construyendo.alquilerpe.presentacion.view.activity;
 
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v7.widget.Toolbar;
@@ -11,6 +12,8 @@ import android.widget.Toast;
 
 
 import apps.construyendo.alquilerpe.R;
+import apps.construyendo.alquilerpe.presentacion.model.AlquilerModel;
+import apps.construyendo.alquilerpe.presentacion.view.fragments.HabDetalleFragment;
 
 public class HabDetalle_Activity extends AppCompatActivity {
     public static final  String EXTRA_ALQUILER="activity.noticiadetalle.EXTRA_NOTICIA";
@@ -24,7 +27,10 @@ public class HabDetalle_Activity extends AppCompatActivity {
         toolbar_RI=(Toolbar) findViewById(R.id.toolbar);
 
         showToolbar(getResources().getString(R.string.registro_inqui),false);
-
+        AlquilerModel alquilerModel=getIntent().getParcelableExtra(EXTRA_ALQUILER);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(android.R.id.content, HabDetalleFragment.newInstance(alquilerModel));
+        ft.commit();
 
 
     }

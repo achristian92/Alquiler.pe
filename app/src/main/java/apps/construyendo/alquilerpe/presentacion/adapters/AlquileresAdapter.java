@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -16,8 +17,9 @@ import apps.construyendo.alquilerpe.presentacion.model.AlquilerModel;
  * Created by Christian 24 on 29/11/2017.
  */
 
-public class AlquileresAdapter extends RecyclerView.Adapter<AlquileresAdapter.ViewHolerAlquileres> {
+public class AlquileresAdapter extends RecyclerView.Adapter<AlquileresAdapter.ViewHolerAlquileres> implements View.OnClickListener {
     List<AlquilerModel> listaalquiler;
+    private View.OnClickListener listener;
 
     public AlquileresAdapter(List<AlquilerModel> listaalquiler) {
         this.listaalquiler = listaalquiler;
@@ -26,7 +28,7 @@ public class AlquileresAdapter extends RecyclerView.Adapter<AlquileresAdapter.Vi
     @Override
     public ViewHolerAlquileres onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_picture,null,false);
-
+        view.setOnClickListener(this);
         return new ViewHolerAlquileres(view);
     }
 
@@ -48,6 +50,17 @@ public class AlquileresAdapter extends RecyclerView.Adapter<AlquileresAdapter.Vi
     @Override
     public int getItemCount() {
         return listaalquiler.size();
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+    if(listener!=null){
+        listener.onClick(view);
+    }
     }
 
     public class ViewHolerAlquileres extends RecyclerView.ViewHolder {
