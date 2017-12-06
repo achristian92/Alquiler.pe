@@ -11,9 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +28,14 @@ import apps.construyendo.alquilerpe.presentacion.view.AlquilerView;
 public class HomeFragment extends Fragment implements AlquilerView{
 
     private AlquileresAdapter adapter;
+    private List<AlquilerModel> tareasModelList=new ArrayList<>();
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private FloatingActionButton fabAgregar;
 
     private AlquilerPresenter alquilerPresenter;
 
-    private List<AlquilerModel> alquilerModelList1=new ArrayList<>();
+
     private onAlquilerClickListener onAlquilerClickListener;
     private List<AlquilerModel> listaalquiler;
 
@@ -58,8 +57,8 @@ public class HomeFragment extends Fragment implements AlquilerView{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_home, container, false);
+
     }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
@@ -68,16 +67,7 @@ public class HomeFragment extends Fragment implements AlquilerView{
         fabAgregar=view.findViewById(R.id.button_fab_add);
         progressBar=view.findViewById(R.id.progressBar);
 
-
-
-        listaalquiler=new ArrayList<>();
-        llenarAlquilares();
-
-
-
-
-
-
+        if(savedInstanceState!=null){}
 
         fabAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,20 +76,17 @@ public class HomeFragment extends Fragment implements AlquilerView{
             }
         });
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        AlquileresAdapter adapter=new AlquileresAdapter(alquilerModelList1);
+       // adapter=new AlquileresAdapter(tareasModelList);
+        adapter=new AlquileresAdapter(tareasModelList);
         recyclerView.setAdapter(adapter);
-
-        if(savedInstanceState!=null){}
         alquilerPresenter = new AlquilerPresenter(this);
-    }
 
-    private void llenarAlquilares() {
-        listaalquiler.add(new AlquilerModel("ALAN","RUIZ",1002,123,"12/12/2017",true));
-        listaalquiler.add(new AlquilerModel("ALAN2","RUIZ3",11,123,"12/12/2017",false));
-        listaalquiler.add(new AlquilerModel("ALAN2","RUIZ3",11,123,"12/12/2017",true));
+
 
     }
+
+
+
     @Override
     public void onStart(){
         super.onStart();
@@ -133,15 +120,20 @@ public class HomeFragment extends Fragment implements AlquilerView{
 
 
     @Override
-    public void mostrarHabitaciones(List<AlquilerModel> alquilerModelList) {
+    public void mostrarHabitaciones(final List<AlquilerModel> tareasModelList) {
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        AlquileresAdapter adapter=new AlquileresAdapter(listaalquiler);
+
+       // adapter=new AlquileresAdapter(tareasModelList);
+        adapter=new AlquileresAdapter(tareasModelList);
         recyclerView.setAdapter(adapter);
 
-        adapter.setOnClickListener(new View.OnClickListener() {
+
+
+      adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                   verDetalle(listaalquiler.get(recyclerView.getChildAdapterPosition(view)));
+                   verDetalle(tareasModelList.get(recyclerView.getChildAdapterPosition(view)));
             }
         });
     }
@@ -154,9 +146,9 @@ public class HomeFragment extends Fragment implements AlquilerView{
         void onAgregarHabclick();
     }
     //cuando tengo el activity todo creado ahora si llamo al metodo del activity
-    @Override
+  /*  @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
 
-    }
+    }*/
 }

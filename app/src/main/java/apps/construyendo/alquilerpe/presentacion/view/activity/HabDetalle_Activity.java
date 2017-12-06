@@ -17,16 +17,13 @@ import apps.construyendo.alquilerpe.presentacion.view.fragments.HabDetalleFragme
 
 public class HabDetalle_Activity extends AppCompatActivity {
     public static final  String EXTRA_ALQUILER="activity.noticiadetalle.EXTRA_NOTICIA";
-    private Toolbar toolbar_RI;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrohab_main);
-        toolbar_RI=(Toolbar) findViewById(R.id.toolbar);
+       // setContentView(R.layout.activity_registrohab_main);
 
-        showToolbar(getResources().getString(R.string.registro_inqui),false);
         AlquilerModel alquilerModel=getIntent().getParcelableExtra(EXTRA_ALQUILER);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(android.R.id.content, HabDetalleFragment.newInstance(alquilerModel));
@@ -34,22 +31,6 @@ public class HabDetalle_Activity extends AppCompatActivity {
 
 
     }
-    public void showToolbar(String titulo, boolean upButton){
-        //toolbar.setTitle(R.string.crear_usu);
-        setSupportActionBar(toolbar_RI);
-        getSupportActionBar().setTitle(titulo);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
-    }
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_ri_toolbar,menu);
-        return true;
-    }
-    public boolean onOptionsItemSelected(MenuItem menuItem){
-        switch (menuItem.getItemId()){
-            case R.id.icon__ri_save:
-                Toast.makeText(this, "Se guardo", Toast.LENGTH_SHORT).show();
-                break;
-        }
-        return true;
-    }
+
+
 }

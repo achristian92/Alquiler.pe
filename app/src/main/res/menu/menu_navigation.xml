@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/item_buscar"
         android:icon="@drawable/icono_search"
@@ -10,6 +11,7 @@
         android:icon="@drawable/icono_home"
         android:title="@string/tab_home"
         />
+
     <item
         android:id="@+id/item_pagos"
         android:icon="@drawable/icono_money"

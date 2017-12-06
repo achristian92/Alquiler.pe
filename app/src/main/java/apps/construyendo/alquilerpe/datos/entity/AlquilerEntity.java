@@ -2,16 +2,87 @@ package apps.construyendo.alquilerpe.datos.entity;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
+
 /**
  * Created by Christian 24 on 30/11/2017.
  */
 
 public class AlquilerEntity {
-    @SerializedName("objectId")
-    private int id_hab;
-    @SerializedName("nombres_inqui")
+  //  @SerializedName("objectId")
+  //  private int id_hab;
+    @SerializedName("nombre")
     private String nombre_inqui;
-    @SerializedName("apellidos_inqui")
+    @SerializedName("apellido")
+    private String apellidos_inqui;
+    @SerializedName("dnis")
+    private int dni;
+
+    @SerializedName("pagado")
+    private double precio;
+    @SerializedName("fecha_pago_men")
+    private String fecha_pago_mensual;
+
+    private int celular;
+    private int num_hab;
+
+
+    public int getCelular() {
+        return celular;
+    }
+
+    public void setCelular(int celular) {
+        this.celular = celular;
+    }
+
+    public int getNum_hab() {
+        return num_hab;
+    }
+
+    public void setNum_hab(int num_hab) {
+        this.num_hab = num_hab;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public String getFecha_pago_mensual() {
+        return fecha_pago_mensual;
+    }
+
+    public void setFecha_pago_mensual(String fecha_pago_mensual) {
+        this.fecha_pago_mensual = fecha_pago_mensual;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public String getApellidos_inqui() {
+        return apellidos_inqui;
+    }
+
+    public void setApellidos_inqui(String apellidos_inqui) {
+        this.apellidos_inqui = apellidos_inqui;
+    }
+
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+
+    public String getNombre_inqui() {
+        return nombre_inqui;
+    }
+
+    public void setNombre_inqui(String nombre_inqui) {
+        this.nombre_inqui = nombre_inqui;
+    }
+    /*  @SerializedName("apellidos_inqui")
     private String apellidos_inqui;
     @SerializedName("dni")
     private int dni;
@@ -116,5 +187,5 @@ public class AlquilerEntity {
 
     public void setEstado_hab(boolean estado_hab) {
         this.estado_hab = estado_hab;
-    }
+    }*/
 }

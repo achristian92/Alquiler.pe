@@ -26,25 +26,30 @@ public class AlquileresAdapter extends RecyclerView.Adapter<AlquileresAdapter.Vi
     }
 
     @Override
-    public ViewHolerAlquileres onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AlquileresAdapter.ViewHolerAlquileres onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_picture,null,false);
         view.setOnClickListener(this);
         return new ViewHolerAlquileres(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolerAlquileres holder, int position) {
-        holder.txt_num_hab.setText(listaalquiler.get(position).getNum_hab().toString());
+    public void onBindViewHolder(AlquileresAdapter.ViewHolerAlquileres holder, int position) {
+
+        holder.txt_nombre_inqui.setText(listaalquiler.get(position).getNombre_inqui()+" " + listaalquiler.get(position).getApellidos_inqui().toString());
+        holder.txt_precio.setText(String.valueOf(listaalquiler.get(position).getPrecio()));
+        holder.txt_fecha_pago.setText(listaalquiler.get(position).getFecha_pago_mensual().toString());
+        holder.txt_num_hab.setText(String.valueOf(listaalquiler.get(position).getNum_hab()));
+     /*
         holder.txt_nombre_inqui.setText(listaalquiler.get(position).getNombre_inqui()+" " + listaalquiler.get(position).getApellidos_inqui().toString());
         holder.txt_fecha_pago.setText(listaalquiler.get(position).getFecha_pago_mensual().toString());
-       // holder.txt_precio.setText((int) listaalquiler.get(position).getPrecio());
+
         holder.aSwitch.setChecked(listaalquiler.get(position).isEstado_hab());
         if(listaalquiler.get(position).isEstado_hab()==true){
             holder.aSwitch.setChecked(true);
         }else{
             holder.aSwitch.setChecked(false);
         }
-
+*/
     }
 
     @Override

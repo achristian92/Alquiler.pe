@@ -16,6 +16,12 @@ public class ListarAlquileres extends UseCase<List<Alquiler>>{
     private final AlquilerRepositorio alquilerRepositorio;
 
 
+
+    public ListarAlquileres(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread, AlquilerRepositorio alquilerRepositorio) {
+        super(threadExecutor, postExecutionThread);
+        this.alquilerRepositorio = alquilerRepositorio;
+    }
+
     @Override
     protected void construirUseCase() {
         try {
@@ -25,10 +31,5 @@ public class ListarAlquileres extends UseCase<List<Alquiler>>{
             notificarUseCaseError(e);
         }
 
-    }
-
-    public ListarAlquileres(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread, AlquilerRepositorio alquilerRepositorio) {
-        super(threadExecutor, postExecutionThread);
-        this.alquilerRepositorio = alquilerRepositorio;
     }
 }

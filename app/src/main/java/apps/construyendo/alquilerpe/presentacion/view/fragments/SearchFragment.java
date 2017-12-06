@@ -20,8 +20,6 @@ import apps.construyendo.alquilerpe.presentacion.model.AlquilerModel;
  */
 public class SearchFragment extends Fragment {
 
-    ArrayList<AlquilerModel> listaalquiler;
-    RecyclerView recyclerView;
 
     public SearchFragment() {
         // Required empty public constructor
@@ -33,20 +31,9 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_search, container, false);
-        recyclerView=view.findViewById(R.id.reciber);
-        listaalquiler=new ArrayList<>();
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        llenarAlquilares();
 
-        AlquileresAdapter adapter=new AlquileresAdapter(listaalquiler);
-        recyclerView.setAdapter(adapter);
         return view;
     }
-    private void llenarAlquilares() {
-        listaalquiler.add(new AlquilerModel("ALAN","RUIZ",1,123,"12/12/2017",true));
-        listaalquiler.add(new AlquilerModel("ALAN2","RUIZ3",11,123,"12/12/2017",false));
-        listaalquiler.add(new AlquilerModel("ALAN2","RUIZ3",11,123,"12/12/2017",true));
 
-    }
 
 }

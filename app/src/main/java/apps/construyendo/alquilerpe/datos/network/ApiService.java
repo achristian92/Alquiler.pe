@@ -15,10 +15,10 @@ import retrofit2.http.Path;
  */
 
 public interface ApiService {
-    @GET("data/Alquiler_habitacion")
+    @GET("data/PruebaHab")
     Call<List<AlquilerEntity>> listaalquileres();
 
-    @POST("data/Alquiler_habitacion")
+    @POST("data/PruebaHab")
     Call<AlquilerEntity> guardarAlquiler(@Body AlquilerEntity alquilerEntity);
 
   //  @PUT("/data/News/{id}") //update

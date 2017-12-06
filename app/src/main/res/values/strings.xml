@@ -36,7 +36,7 @@
     <string name="habitacion">Habitacion :</string>
     <string name="num_hab">101</string>
     <string name="num_dni">DNI</string>
-    <string name="celular_inq">Celular</string>
+    <string name="celular_inq">  Celular</string>
     <string name="crear_new_num_hab">Crear numero habitacion</string>
     <string name="txt_fecha_pag">Fecha de Pago Mensual</string>
     <string name="seleccion_hab">Asigne Habitacion</string>
